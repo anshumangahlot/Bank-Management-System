@@ -151,7 +151,7 @@ void calculateInterest(struct BankAccount accounts[], int count) {
 
 void applyLoan(struct BankAccount accounts[], int count) {
     int accNo, index;
-    float amount, rate;
+    float amount, rate = 8.5 ;
     int years;
     printf("Enter account number: ");
     scanf("%d", &accNo);
@@ -163,8 +163,8 @@ void applyLoan(struct BankAccount accounts[], int count) {
     }
     printf("Enter loan amount: ");
     scanf("%f", &amount);
-    printf("Enter interest rate (%%): ");
-    scanf("%f", &rate);
+    //printf("Enter interest rate (%%): ");
+    //scanf("%f", &rate);
     printf("Enter loan term in years: ");
     scanf("%d", &years);
     float totalRepayment = amount * pow(1 + rate / 100, years);
